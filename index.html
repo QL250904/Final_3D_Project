@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Serpent: Evolution</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body class="theme-cyber">
+
+    <div id="start-screen">
+        <div class="menu-container">
+            <h1>NEON SERPENT</h1>
+            <p class="subtitle">3D ARENA BATTLE</p>
+            
+            <div class="settings-panel">
+                
+                <div class="setting-group">
+                    <label>THEME</label>
+                    <div class="option-row theme-picker">
+                        <div class="opt-btn selected" data-theme="cyber">Cyber</div>
+                        <div class="opt-btn" data-theme="ocean">Ocean</div>
+                        <div class="opt-btn" data-theme="galaxy">Galaxy</div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label>SKIN</label>
+                    <div class="option-row skin-picker">
+                        <div class="opt-btn selected" data-skin="smooth">Smooth</div>
+                        <div class="opt-btn" data-skin="block">Block</div>
+                        <div class="opt-btn" data-skin="spiky">Spiky</div>
+                        <div class="opt-btn" data-skin="mecha">Mecha</div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label>COLOR</label>
+                    <div class="option-row color-picker">
+                        <div class="color-dot selected" style="background: #00ffcc;" data-color="0x00ffcc"></div>
+                        <div class="color-dot" style="background: #ff0055;" data-color="0xff0055"></div>
+                        <div class="color-dot" style="background: #ffff00;" data-color="0xffff00"></div>
+                        <div class="color-dot" style="background: #0088ff;" data-color="0x0088ff"></div>
+                        <div class="color-dot" style="background: #aa00ff;" data-color="0xaa00ff"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="start-btn">PLAY GAME</button>
+            <p class="footer-note">Mouse to Steer • Hold SPACE to Boost • Press 'V' for Camera</p>
+        </div>
+    </div>
+
+    <div id="game-ui">
+        <div id="score-board">
+            <span class="label">SCORE</span>
+            <span id="score-val">0</span>
+        </div>
+        
+        <div id="cam-controls">
+            <button id="btn-tpp" class="cam-btn active">TPP</button>
+            <button id="btn-fpp" class="cam-btn">FPP</button>
+        </div>
+
+        <div id="boost-btn"><span>⚡</span></div>
+    </div>
+
+    <div id="gameover">
+        <div class="gameover-box">
+            <h2>GAME OVER</h2>
+            <p id="finalScore">Score: 0</p>
+            <button id="restart-btn">TRY AGAIN</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
